@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Paws pet Adoption</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: #FAF7F2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width:950px ;
+            background: #FFFFFF;
+            display: flex;
+            border-radius: 15PX;
+            overflow: hidden;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .left{
+            width: 40%;
+            background: #8B5E3C;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .left img{
+            width:100% ;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        left h1{
+            margin-top: 20px;
+            font-size: 34px;
+        }
+
+        left p{
+            margin-top: 15px;
+            line-height: 28px;
+            font-size: 18px;
+        }
+
+        .right{
+            width:60% ;
+            padding: 30px;
+        }
+
+        .right h2{
+            text-align: center;
+            color: #6B4423;
+            margin-bottom: 25px;
+        }
+        .form-group{
+            margin-bottom: 15px;
+        }
+        
+        .form-group p{
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input{
+            width:100% ;
+            padding:11px ;
+            border: 1px sold #E7DCCF;
+            border-radius: 16px;
+            font-size: 15px;
+        }
+
+        button{
+            width: 100%;
+            padding: 13px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 6px;
+            background: #A47149;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="left">
+        <img src="./public/src/chinnilu.jpeg" alt="Dog">
+        <h1>🐾 HAPPY PAWS</h1>
+        <P>
+            " Find Your Forever Friend ❤️"
+            <br>
+            <br>
+            " Love • Care • Adopt"
+        </P>
+    </div>
+    <div class="right">
+        <h2>Pet Adoption Registration</h2>
+        <form action="./adoption.jsp" method="post" novalidate>
+            <div class="form-group">
+                <p>Adopter Name</p>
+                <input type="text" name="adopterName" placeholder="Enter Your Name" pattern="^[A-Z][a-z]{3,14}$" minlength="4" maxlength="15" required autofocus>
+            </div>
+            <div class="form-group">
+                <p>Create Password</p>
+                <input type="password" name="password" placeholder="Create password" pattern="[A-Za-z0-9@#$]{8,15}" required>
+            </div>
+            <div class="form-group">
+                <p>Email Address</p>
+                <input type="email" name="email" placeholder="Enter Email" required>
+            </div>
+            <div class="form-group">
+                <p>Instagram Profile</p>
+                <input type="url" name="instagram" placeholder="https://instagram.com/username">
+            </div>
+            <div class="form-group">
+                <p>Preferred Pet</p>
+                <input type="text" name="pet" list="pets" placeholder="Search Your Pet">
+                <datalist id="pets">
+                    <option>Golden Retriever</option>
+                    <option>Labrador</option>
+                    <option>Beagle</option>
+                    <option>German Shepherd</option>
+                    <option>Persian Cat</option>
+                    <option>Rabbit</option>
+                </datalist>
+            </div>
+            <div class="form-group">
+                <p>Home Size (Sq.ft)</p>
+                <input type="text" name="home" value="800">
+            </div>
+            <div class="form-group">
+                <p>Application ID</p>
+                <input type="text" name="application" value="ADP2026" readonly>
+            </div>
+            <div class="form-group">
+                <p>Application Status</p>
+                <input type="text" name="status" value="Pending Verification" disabled>
+            </div>
+            <button>🐾 Adopt Now</button>
+        </form>
+    </div>
+   </div> 
+</body>
+</html>
